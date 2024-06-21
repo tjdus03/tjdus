@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+      <style>
+        body {
+            background-color: #EFCDE9;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            height: 100%; 
+            margin: 0;
+            flex-direction: column; 
+            overflow: auto; 
+        }
+
+        .content {
+            background-color: white;
+            padding: 80px;
+            width: 90%;
+            height: 70%;
+            box-sizing: border-box; 
+            border-radius: 40px;
+            margin-top: 85px;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            position: relative; 
+        }
+
+        .image-container {
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin-top: -630px;
+            width: 100%;
+            height: auto;
+        }
+
+        .right-image {
+            position: absolute;
+            right: 40px;
+            bottom: 578px; 
+            width: 2.4%;
+            height: auto;
+            filter: brightness(10); 
+            transition: filter 0.3s ease; 
+        }
+
+        .right-image:hover {
+            filter: brightness(1); 
+        }
+
+        .left-image {
+            position: absolute;
+            right: calc(2.4% + 70px + 10px);
+            bottom: 578px;
+            width: 2.4%;
+            height: auto;
+            filter: brightness(10);
+            transition: filter 0.3s ease;
+        }
+
+        .left-image:hover {
+            filter: brightness(1); 
+        }
+    
+        .shift-right {
+            position: relative;
+            right: 80px;
+        }
+
+        .page2 {
+            background-color: #ffffff; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100%;
+            margin: 0; 
+            margin-top: 50px;
+        }
+      
+        .element, .spaced {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .spaced{
+            transform: translateY(160px) translateX(-300px);
+        }
+
+        .element {
+        transform: translateY(-130px) translateX(315px);
+         display: flex;
+        align-items: flex-end;
+        }
+
+        .spaced img {
+            margin: 0 15px;
+        }
+      
+        .opaque-on-hover:hover {
+        opacity: 0.4;
+        transition: filter 0.8s ease;
+    }
+
+    .image-overlay-container {
+        position: relative;
+        display: inline-block; 
+    }
+
+    .overlay-image {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%); 
+        width: 20%;
+        height: auto; 
+    }
+
+    .move-left {
+        transform: translateX(-100px);
+    }
+
+    .move-right {
+        transform: translateX(100px);
+    }
+   
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="image-container">
+            <img src="img/em_logowh.png" style="width:18%; height:auto;">
+            <img class="left-image" src="img/em_7.png">
+            <img class="right-image" src="img/em_6.png">
+            <img class="shift-right" src="img/em_typo.png" style="width: 60%; height: auto; margin-top: 65rcap">
+            <img class="shift-right" src="img/em_logophoto.png" style="width: 40%; height: auto; margin-top: 93dvb; ">
+        </div>
+    </div>
+
+    <!-- 두 번째 페이지 추가 -->
+    <div class="page2">
+        <div class="element"> <!-- 첫 번째 행 -->
+            <img src="img/em_15 (2).png" style="width: 43%; height: auto;" class="opaque-on-hover">
+            <img src="img/em_9.png" style="width: 45%; height: auto; margin-right: 8px;" class="opaque-on-hover">
+            <img src="img/em_10.png" style="width: 42%; height: auto;" class="opaque-on-hover">
+        </div>
+        <div class="spaced"> <!-- 두 번째 행 -->
+            <div class="image-overlay-container move-left">
+                <img src="img/em_12.png" style="width: 325%; height: auto; " class="opaque-on-hover">
+            </div>
+            <img src="img/em_14.png" style="width: 83%; height: auto;" class="opaque-on-hover move-right">
+        </div>
+    </div>
+</body>
+</html> 
